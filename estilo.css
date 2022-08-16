@@ -1,0 +1,455 @@
+*{
+    font-family: 'Jura', sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    
+    
+}
+.body{
+    background-image: url(fondopage.jpg);
+    
+}
+
+
+.content__page{
+    display: grid;
+    grid-template-areas: 
+    "nav nav  "
+    "inicio inicio "
+    "new new"
+    "ingredientes ingredientes"
+    "info info"
+    "contacto contacto"
+    "footer footer";
+    grid-template-rows: repeat(7,auto);
+    grid-template-columns: repeat(2,1fr);
+    background-image: url(fondopage.jpg);
+    min-height: 100%;
+    
+}
+
+
+/* -----------------------------------nav------------------------------------------------------------------------ */
+
+.content__nav{
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    
+}
+
+
+.nav{
+    
+    height: 75px;
+    width: 100%;
+    background-color: rgb(187, 228, 169);
+   ;
+}
+
+
+.nav__ul{
+    
+    list-style: none;
+    display:flex;
+    justify-content: right;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    
+
+    
+    
+}
+
+.nav__li{
+    display: flex;
+    justify-content: right;
+    width: 30%;
+    animation-name: navanimation;
+    animation-duration: 2s;
+    
+    
+}
+@keyframes navanimation {
+    0%{transform:scaleX(.3);transform-origin:right center}
+    50%{transform:scaleX(.2);transform-origin:right center}
+    100%{transform:scaleX(1);transform-origin:right center}
+}
+
+
+/* .nav__li:last-child{
+    padding-right: 110px;
+} */
+
+
+.nav__a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    
+}
+
+
+
+
+
+
+
+.content__img{
+    width: 50%;
+    
+    
+}
+
+.nav__img{
+    border-radius: 50%;
+    height: 90px;
+    padding: 5px 0 5px 0;
+    
+}
+
+
+
+/* ----------------------------------------------------------------iniciooooooo--------------------------- */
+
+
+.inicio{
+    grid-area: inicio;
+    margin-top: 2rem;
+    
+}
+
+
+.inicio__content-image{
+    display: flex;
+    justify-content: center;
+
+    
+    
+}
+
+
+.inicio__content-image img{
+    object-fit: cover;
+    height: 600px;
+    width: 90%;
+    border: 2px solid black;
+    
+}
+
+.inicio__content-text{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    z-index: 5;
+    
+    animation-name: textanimation;
+    animation-duration: 2s;
+    
+    
+
+    
+}
+
+@keyframes textanimation{
+    0%{left: 10%; top: 20%;}
+    100%{left: 20%; top: 20%;}}
+
+.inicio__title{
+    color: #000;
+    font-size: 70px;
+}
+
+
+.inicio__button{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 56, 7);
+    border: 0;
+    padding: 10px 20px;
+}
+
+.inicio__button:hover{
+    background-color: #fff;
+    color:rgba(58, 173, 73, 0.829) ;
+    transition: .5s;
+}
+
+
+.iconos{
+    position: fixed;
+    top: 35%;
+    left: 97%;
+    display: flex;
+    flex-direction: column;
+    
+    font-size: 100px;
+
+}
+
+.iconos i{
+    font-size: 30px;
+    padding-top: 30px;
+}
+
+
+
+/* --------------------------------------------------NEW PRODUCTS-------------------------------- */
+
+
+.newproducts{
+    grid-area: new;
+    width: 90%;
+}
+
+.newproducts__contain-title{
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+.newproducts__title{
+    font-size: 40px;
+    
+}
+
+
+
+
+.newproducts__contain-image{
+    margin-top: 30px;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around; 
+   flex-wrap: wrap;
+}
+
+.newprodcts__contain-column{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+
+.newproducts__image{
+    border-radius: 100%;
+    border: 2px solid #000;
+    height: 350px;
+    width: 300px;
+}
+
+
+
+
+.newproducts__info{
+    margin: 20px;
+    background-color: rgb(5, 5, 5);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 5px 20px 5px 20px;
+    border:solid 1px #000;
+    
+    text-decoration: none;
+    
+}
+
+
+
+
+
+
+
+
+
+.newproducts__hr{
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+
+
+/* ----------------------------ingredientes------- */
+
+
+.ingredientes{
+    grid-area: ingredientes;
+    height: auto;
+    width: 100%;
+    margin-top:  10px;
+    
+    display: flex;
+    justify-content: center;
+}
+
+
+.ingredientes__contain{
+    height: 600px;
+    width: 90%;
+    background-image: url(golfperri.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    filter: brightness(.8);
+    
+}
+
+.ingredientes__contain-text{
+    position: absolute;
+    width: 20%;
+    height: 600px;
+    background-color: rgba(12, 30, 189, 0.288);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    left: 150px;
+}
+
+.ingredientes__text span{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+.ingredientes__title{
+    font-size: 25px;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------INFO------------------------------------------------- */
+
+
+.info{
+    margin-top: 1%;
+    grid-area: info;
+    height: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.info__image-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.info__image{
+   
+}
+
+
+.info__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: rgb(139, 160, 255);;
+}
+
+.info__list-contenedor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style:circle;
+    
+}
+
+.info__list{
+    color: rgb(208, 212, 247);
+    padding-top: 2%;
+    font-size: 15px;
+}
+
+
+.info__list-b{
+    font-size: 15px;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(0, 163, 22), 0 0 0.2em rgb(1, 160, 22);
+    color: white;
+    
+}
+
+
+
+
+
+
+
+
+
+/* ------------------------------------contacto----------------------------------------- */
+
+
+.contacto{
+    grid-area: contacto;
+    margin-top: 1%;
+    height: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+
+
+.contacto__contain-all{
+
+}
+
+.contacto__title{
+    text-align: center;
+    font-size: 30px;
+    
+    color:rgb(139, 160, 255) ;
+}
+
+.contacto__contain{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    
+}
+.contacto__contain i{
+    font-size: 25px;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.contacto__contain span{
+    font-size: 20px;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.contacto__contain a{
+    padding-left: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* -------------------------footer-------------------- */
+
+
+
+.footer{
+    grid-area: footer;
+    text-align: center;
+    
+}
+
+
+/* ----------------------------------prueba golfitos-------------- */
+
