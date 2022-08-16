@@ -1,0 +1,228 @@
+*{
+    font-family: 'Jura', sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+   
+    
+}
+ .body{
+    
+    
+}
+
+
+.content__page{
+    display: grid;
+    grid-template-areas: 
+    "nav nav  "
+    "inicio info "
+    "contacto contacto";
+    grid-template-rows: repeat(3,auto);
+    grid-template-columns: repeat(2,1fr);
+    /* background-color: green; */
+    background-image: url(fondopage.jpg);
+    min-height: 100vh; 
+}
+
+
+
+/* ------------------------nav-------------------------------------- */
+
+.content__nav{
+    grid-area: nav;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    
+}
+
+
+.nav{
+    
+    height: 75px;
+    width: 100%;
+    background-color: #fff;
+   ;
+}
+
+
+.nav__ul{
+    background-color: rgb(187, 228, 169);
+    list-style: none;
+    display:flex;
+    justify-content: right;
+    align-items: center;
+    height: 100%;
+    
+    
+
+    
+    
+}
+
+.nav__li{
+    display: flex;
+    justify-content: right;
+    width: 30%;
+    animation-name: navanimation;
+    animation-duration: 2s;
+    
+    
+}
+@keyframes navanimation {
+    0%{transform:scaleX(.3);transform-origin:right center}
+    50%{transform:scaleX(.2);transform-origin:right center}
+    100%{transform:scaleX(1);transform-origin:right center}
+}
+
+
+.nav__li:last-child{
+    padding-right: 110px;
+}
+
+
+.nav__a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    
+}
+
+
+
+
+
+
+
+.content__img{
+    width: 50%;
+    
+    
+}
+
+.nav__img{
+    border-radius: 50%;
+    height: 90px;
+    padding: 5px 0 5px 0;
+    
+}
+
+/* -------------------------------------------golfitos------------------------- */
+.golfitos{
+    grid-area: inicio;
+}
+
+.golfitos__contain{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+
+.golfitos__contain-column{
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+
+.golfitos__contain-column img{
+    height: 100%;
+    /* width: 50%; */
+    padding: 20px;
+}
+
+
+
+.golfitos__contain-column p{
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+
+.infogolfitos
+
+
+.infogolfitos__contain{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    align-items: center;
+    flex-direction: column;
+}
+
+.infogolfitos__contain p{
+   
+    
+    padding-top: 140px;
+}
+
+
+
+
+/* ------------------------------------contacto----------------------------------------- */
+
+
+.contacto{
+    grid-area: contacto;
+    margin-top: 1%;
+    height: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+
+
+.contacto__contain-all{
+
+}
+
+.contacto__title{
+    text-align: center;
+    font-size: 30px;
+    
+    color:rgb(139, 160, 255) ;
+}
+
+.contacto__contain{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    
+}
+.contacto__contain i{
+    font-size: 25px;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.contacto__contain span{
+    font-size: 20px;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.contacto__contain a{
+    padding-left: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* -------------------------footer-------------------- */
+
+
+
+.footer{
+    grid-area: footer;
+    text-align: center;
+    
+} 
